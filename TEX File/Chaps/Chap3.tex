@@ -4,7 +4,10 @@
 %	Proofreader: lh1962
 %----------------------------------------------------------------------------------------
 
-\chapterimage{chapter_head_1.pdf} % Chapter heading image
+\chapterimage{yosuganosora.png} % Chapter heading image
+
+
+
 
 
 
@@ -474,19 +477,19 @@ q^\dag q &\stackrel{!}{=} 1 \nonumber\\
 
 就像单位复数构成一个群（群乘法为复数乘法）那样，单位四元数也构成一个群（群乘法为四元数乘法）。
 
-类似于我们将二维复数与$2 \times 2$实数矩阵建立联系的做法，四元数也可如此 --- 将四个基$\mathbf{1,i,j,k}$与合适的矩阵一一对应。其中一种方式（还有别的方式）是将它们与$2 \times 2$复数矩阵对应：
+类似于我们将二维复数与$2 \times 2$实数矩阵建立联系的做法，四元数也可如此 --- 将四个基$\mathbf{1,i,j,k}$与合适的矩阵一一对应。其中一种方式（还有别的方式）是将它们与$2 \times 2$复数矩阵对应\footnote{原文\eqref{equ3.30}式有误，由此造成\eqref{equ3.31}, \eqref{equ3.38}, \eqref{equ3.39}, \eqref{equ3.43}, \eqref{equ3.44}式有误，译文均已按勘误表修改。}：
 \begin{align}
 \mathbf{1} = \begin{pmatrix}
 				1 & 0 \\ 0 & 1
 			 \end{pmatrix}
 \quad &, \quad
 \mathbf{i} = \begin{pmatrix}
-				0 & -1 \\ 1 & 0
+				0 & 1 \\ -1 & 0
 			 \end{pmatrix}
 \nonumber \\
 \label{equ3.30}
 \mathbf{j} = \begin{pmatrix}
-				0 & -i \\ -i & 0
+				0 & i \\ i & 0
 			 \end{pmatrix}
 \quad &, \quad
 \mathbf{k} = \begin{pmatrix}
@@ -494,12 +497,12 @@ q^\dag q &\stackrel{!}{=} 1 \nonumber\\
 				0 & -i
 			 \end{pmatrix}
 \end{align}
-不难验证上式满足四元数乘法，比如\eqref{equ3.25}、\eqref{equ3.27}式。这样任意一个四元数都可用矩阵表示为：
+不难验证上式满足四元数乘法，比如\eqref{equ3.25}、\eqref{equ3.27}式。这样任意一个四元数都可用矩阵表示为\footnote{原文下式有误，译文已按勘误表修改。}：
 \begin{equation}
 \label{equ3.31}
 q = a\mathbf{1} + b\mathbf{i} + c\mathbf{j} + d\mathbf{k} = \begin{pmatrix}
-	a + di & -b - ci \\
-	b - ci & a - di
+	a + di & b + ci \\
+	-b + ci & a - di
 	\end{pmatrix}
 \end{equation}
 由上式可见
@@ -542,21 +545,21 @@ v' = q^{-1} v q
 \label{equ3.37}
 t = \cos \theta +  u\sin \theta
 \end{equation}
-利用\eqref{equ3.34}式，任意三维向量$\vec{v}$可表示为：
+利用\eqref{equ3.34}式，任意三维向量$\vec{v}$可表示为\footnote{原文下式有误，译文已按勘误表修改。}：
 \begin{equation}
 \label{equ3.38}
 \vec{v} = (v_x, v_y, v_z)^T = v_x \mathbf{i} + v_y \mathbf{j} + v_z \mathbf{k} \underbrace{=}_{\eqref{equ3.31}\text{式}} \begin{pmatrix}
-		iv_z & -v_x - iv_y \\
-		v_x - iv_y & -iv_z
+		iv_z & v_x + iv_y \\
+		-v_x + iv_y & -iv_z
 	\end{pmatrix}
 \end{equation}
 
-简明起见我们举个特例，把向量$\vec{v} = (1, 0, 0)^T$绕$z$轴旋转。
+简明起见我们举个特例，把向量$\vec{v} = (1, 0, 0)^T$绕$z$轴旋转\footnote{原文下式有误，译文已按勘误表修改。}。
 \begin{align}
 \label{equ3.39}
 \vec{v} &= (1, 0, 0)^T \rightarrow v = 1\mathbf{i} + 0\mathbf{j} + 0\mathbf{k} =
 	\begin{pmatrix}
-		0 & -1 \\ 1 & 0
+		0 & 1 \\ -1 & 0
 	\end{pmatrix}
 \\
 \label{equ3.40}
@@ -590,7 +593,7 @@ R_z^{-1} (\theta) =
 		0 & \mathrm{e}^{i\theta}
 	\end{pmatrix}
 \end{equation}
-根据\eqref{equ3.36}式旋转向量$v$；
+根据\eqref{equ3.36}式旋转向量$v$：\footnote{原文下式有误，译文已按勘误表修改。}
 \begin{align}
 v' &= R_z^{-1} (\theta) v R_z(\theta) =
 	\begin{pmatrix}
@@ -598,30 +601,29 @@ v' &= R_z^{-1} (\theta) v R_z(\theta) =
 		0 & \mathrm{e}^{i\theta}
 	\end{pmatrix}
 	\begin{pmatrix}
-	0 & -1 \\ 1 & 0
+	0 & 1 \\ -1 & 0
 	\end{pmatrix}
 	\begin{pmatrix}
 		\mathrm{e}^{i\theta} & 0 \\
 		0 & \mathrm{e}^{-i\theta}
 	\end{pmatrix}
 \nonumber \\
-\label{equ3.43}
 &= \begin{pmatrix}
-		0 & -\mathrm{e}^{-i 2\theta} \\
-		\mathrm{e}^{i 2\theta} & 0
+		0 & \mathrm{e}^{-i 2\theta}  \\
+		-\mathrm{e}^{i 2\theta} & 0
 	\end{pmatrix}
 = \begin{pmatrix}
-		0 & -\cos (2\theta) + i\sin (2\theta) \\
-		\cos (2\theta) + i\sin (2\theta) & 0
-  \end{pmatrix}
+		0 & \cos (2\theta) - i\sin (2\theta) \\
+		-\cos (2\theta) - i\sin (2\theta) & 0
+  \end{pmatrix} \label{equ3.43}
 \end{align}
-另一方面，向量$v'$用四元数表示为：
+另一方面，向量$v'$用四元数表示为：\footnote{原文下式有误，译文已按勘误表修改。}
 \begin{equation}
 \label{equ3.44}
 v' =
 	\begin{pmatrix}
-		iv'_z & -v'_x - iv'_y \\
-		v'_x - iv'_y & -iv'_z
+		iv'_z & v'_x + iv'_y \\
+		-v'_x + iv'_y & -iv'_z
 	\end{pmatrix}
 \end{equation}
 上式与\eqref{equ3.43}式比较可得：
@@ -886,7 +888,7 @@ R_1 =
 	\end{pmatrix}
 \end{equation}
 
-我们已经得出$\mathcal{SO}(3)$群的生成元显式的矩阵形式（\eqref{equ3.62}式），这样就能直接计算生成元之间的Lie括号了\mpar{前面说过，Lie代数元素间的‘乘法’是Lie括号。直接计算生成元的基之间的Lie括号，就可得到所有生成元之间的Lie括号（任意生成元都是基的线性组合）。之后会看到生成元的基在Lie括号运算下的行为极其重要。Lie代数的所有重要信息都蕴含在生成元的基的Lie括号中。}，不难得到\mpar{例如：$[J_1, J_2] = J_1 J_2 - J_2 J_1=
+我们已经得出$\mathcal{SO}(3)$群的生成元显式的矩阵形式（\eqref{equ3.62}式），这样就能直接计算生成元之间的Lie括号了\mpar{前面说过，Lie代数元素间的‘乘法’是Lie括号。直接计算生成元的基之间的Lie括号，就可得到所有生成元之间的Lie括号（任意生成元都是基的线性组合）。之后会看到生成元的基在Lie括号运算下的行为极其重要。Lie代数的所有重要信息都蕴含在生成元的基的Lie括号中。}，不难得到\mpar{例如：$[J_1, J_2] = J_1 J_2 - J_2 J_1= 
 	 	\begin{pmatrix}
 			0 & 0 & 0 \\
 			0 & 0 & -1 \\
@@ -918,13 +920,13 @@ R_1 =
 			0 & 0 & 0 \\
 			0 & 0 & 0
 		\end{pmatrix}
-		=
+		= 
 		\begin{pmatrix}
 			0 & -1 & 0 \\
 			1 & 0 & 0 \\
 			0 & 0 & 0
 		\end{pmatrix}
-		= \underbrace{\epsilon_{12k}}_{\mathclap{=0, \text{除了}k=3}} J_k
+		= \underbrace{\epsilon_{12k}}_{\mathclap{=0, \text{除了}k=3}} J_k 
 		= \epsilon_{123} J_3 = J_3$.}：
 \begin{equation}
 \label{equ3.71}
@@ -1742,10 +1744,10 @@ $\Lambda_P$称为宇称算符，相应的宇称变换其实就是镜面反射。
 		\end{pmatrix}
 \]
 
-因此沿$x$轴的推动变换的生成元为：
+因此沿$x$轴的推动变换的生成元为：\footnote{原文有误，译文已按勘误表修改。与\eqref{equ3.72}式的理由相同，\eqref{equ3.141}, \eqref{equ3.142}式的生成元添加系数$i$，并且有限变换为$\Lambda_x(\phi) = \mathrm{e}^{i \phi K_x}$等等。只有添加系数$i$之后才能保证对易关系\eqref{equ3.158}, \eqref{equ3.159}成立。}
 \begin{equation}
 \label{equ3.141}
-	K_x =
+	K_x = i
 		\begin{pmatrix}
 			0 & 1 & 0 & 0 \\
 			1 & 0 & 0 & 0 \\
@@ -1754,10 +1756,10 @@ $\Lambda_P$称为宇称算符，相应的宇称变换其实就是镜面反射。
 		\end{pmatrix}
 \end{equation}
 
-同理可以求出沿$y$、$z$轴推动变换的生成元：
+同理可以求出沿$y$、$z$轴推动变换的生成元：\footnote{原文下式有误，译文已按勘误表修改。}
 \begin{equation}
 \label{equ3.142}
-	K_y =
+	K_y = i
 		\begin{pmatrix}
 			0 & 0 & 1 & 0 \\
 			0 & 0 & 0 & 0 \\
@@ -1765,7 +1767,7 @@ $\Lambda_P$称为宇称算符，相应的宇称变换其实就是镜面反射。
 			0 & 0 & 0 & 0
 		\end{pmatrix}
 	, \quad
-	K_z =
+	K_z = i
 		\begin{pmatrix}
 			0 & 0 & 0 & 1 \\
 			0 & 0 & 0 & 0 \\
@@ -1774,13 +1776,13 @@ $\Lambda_P$称为宇称算符，相应的宇称变换其实就是镜面反射。
 		\end{pmatrix}
 \end{equation}
 
-根据Lie理论，把生成元扔进$\mathrm{e}$指数里就能得到有限大小的变换\mpar{生成元$K_x, K_y, K_z$都是厄米的，即$K_i^\dag = K_i$。因此$\mathrm{e}$指数里不加虚数单位$i$，因为加了之后就变成反厄米的了。}：
+根据Lie理论，把生成元扔进$\mathrm{e}$指数里就能得到有限大小的变换\mpar{生成元$K_x, K_y, K_z$都是厄米的，即$K_i^\dag = K_i$。因此$\mathrm{e}$指数里不加虚数单位$i$，因为加了之后就变成反厄米的了。}：\footnote{原文下式有误，译文已按勘误表修改。}
 \[
-	\Lambda_x(\phi) = \mathrm{e}^{\phi K_x}
+	\Lambda_x(\phi) = \mathrm{e}^{i \phi K_x}
 \]
 还以$K_x$为例，简明起见，只考虑其中exciting的部分 --- $2 \times 2$矩阵$k_x$（见\eqref{equ3.140}式）。将它的指数函数用级数展开式计算，并利用\mpar{不难算出$k_x^2 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$，然后$k_x^4 = \mathbf{1}$等等等等。对于奇次幂有$k_x^3 = k_x, k_x^5 = k_x, \dots$}$k_x^2 = \mathbf{1}$：
 \begin{align}
-	\Lambda_x(\phi) &= \mathrm{e}^{\phi k_x} = \sum_{n = 0}^{\infty} \frac{\phi^n k_x^n}{n!} = \sum_{n = 0}^{\infty} \frac{\phi^{2n}}{(2n)!} \underbrace{k_x^{2n}}_{=1} + \sum_{n = 0}^{\infty} \frac{\phi^{2n + 1}}{(2n + 1)!} \underbrace{k_x^{2n + 1}}_{=k_x} \nonumber \\
+	\Lambda_x(\phi) &= \mathrm{e}^{i k_x} = \sum_{n = 0}^{\infty} \frac{\phi^n k_x^n}{n!} = \sum_{n = 0}^{\infty} \frac{\phi^{2n}}{(2n)!} \underbrace{k_x^{2n}}_{=1} + \sum_{n = 0}^{\infty} \frac{\phi^{2n + 1}}{(2n + 1)!} \underbrace{k_x^{2n + 1}}_{=k_x} \nonumber \\
 	&= \left( \sum_{n = 0}^{\infty} \frac{\phi^{2n}}{(2n)!} \right) I + \left( \sum_{n = 0}^{\infty} \frac{\phi^{2n + 1}}{(2n + 1)!} \right) k_x = \cosh(\phi) I + \sinh(\phi) k_x \nonumber \\
 	\label{equ3.143}
 	&=
@@ -1844,7 +1846,6 @@ $\Lambda_T \mathcal{SO}(1, 3)^\uparrow, \Lambda_P \Lambda_T \mathcal{SO}(1, 3)^\
 \end{align}
 上两式可以用上节导出的$J, K$显式矩阵形式暴力计算，例如\footnote{原文\eqref{equ3.149}, \eqref{equ3.150}式有误，译文已按勘误表修改。}：
 \begin{align}
-\label{equ3.149}
 	J_x &=
 		\begin{pmatrix}
 			0 & 0 & 0 & 0 \\
@@ -1853,7 +1854,7 @@ $\Lambda_T \mathcal{SO}(1, 3)^\uparrow, \Lambda_P \Lambda_T \mathcal{SO}(1, 3)^\
 			0 & 0 & 1 & 0
 		\end{pmatrix}
 	\rightarrow
-	J_x' = \Lambda_P J_x (\Lambda_P)^T = J_x
+	J_x' = \Lambda_P J_x (\Lambda_P)^T = J_x \label{equ3.149}
 	\\
 	\Lambda_P J_x (\Lambda_P)^T &=
 		\begin{pmatrix}
@@ -1877,19 +1878,18 @@ $\Lambda_T \mathcal{SO}(1, 3)^\uparrow, \Lambda_P \Lambda_T \mathcal{SO}(1, 3)^\
 		\end{pmatrix}
 		}^T
 	\nonumber \\
-\label{equ3.150}
 	&=
 		\begin{pmatrix}
 			0 & 0 & 0 & 0 \\
 			0 & 0 & 0 & 0 \\
 			0 & 0 & 0 & -1 \\
 			0 & 0 & 1 & 0
-		\end{pmatrix}
+		\end{pmatrix} \label{equ3.150}
 \end{align}
-同理，
+同理，\footnote{下式有误，译文已修改。}
 \begin{align}
 \label{equ3.151}
-	K_x &=
+	K_x &= i
 		\begin{pmatrix}
 			0 & 1 & 0 & 0 \\
 			1 & 0 & 0 & 0 \\
@@ -1898,7 +1898,7 @@ $\Lambda_T \mathcal{SO}(1, 3)^\uparrow, \Lambda_P \Lambda_T \mathcal{SO}(1, 3)^\
 		\end{pmatrix}
 	\rightarrow K'_x = \Lambda_P K_x (\Lambda_P)^T = -K_x
 \\
-	\Lambda_P K_x (\Lambda_P)^T &=
+	\Lambda_P K_x (\Lambda_P)^T &= i
 		\begin{pmatrix}
 			1 & 0 & 0 & 0 \\
 			0 & -1 & 0 & 0 \\
@@ -1921,7 +1921,7 @@ $\Lambda_T \mathcal{SO}(1, 3)^\uparrow, \Lambda_P \Lambda_T \mathcal{SO}(1, 3)^\
 		}^T
 \nonumber \\
 \label{equ3.152}
-	&= -
+	&= -i
 		\begin{pmatrix}
 			0 & 1 & 0 & 0 \\
 			1 & 0 & 0 & 0 \\
